@@ -1,0 +1,12 @@
+<div class="left">
+
+    <input type="text" placeholder="name" #name>
+    <input type="text" placeholder="url" #url>
+  
+    <button (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
+    <button (click)="editTutorial(name.value,url.value)">Edit a Tutorial</button>
+    <button mat-button>
+      <mat-icon>face</mat-icon>
+      Click me!
+    </button>
+  </div>

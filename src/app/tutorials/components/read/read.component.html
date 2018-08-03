@@ -1,0 +1,12 @@
+<div class="right" *ngIf="tutorials$">
+  <h3>Tutorials</h3>
+  <button *ngIf="!ea" (click)="showEdit()">Show Edit</button>
+  <button *ngIf="ea" (click)="hideEdit()">Hide Edit</button>
+  <ul>
+    <li *ngFor="let tutorial of tutorials$ | async; let i=index">
+      <button (click)="removeTutorial(i)">Delete</button>
+      <button *ngIf="ea" (click)="editTutorial(i)">Edit</button>
+      <a [href]="tutorial.url" target="_blank">{{tutorial.name}}</a>
+    </li>
+  </ul>
+</div>
